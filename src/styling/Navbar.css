@@ -1,58 +1,87 @@
 .navbar {
-  width: 100vw;
-  height: 12vh;
-  backdrop-filter: blur(10px);
-  /* background-color: ; */
-  color: #fff;
-  /* padding-top: 10px; */
-  position: fixed;top: 0px;
-  z-index: 10000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-buttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  object-fit: cover;
-  height: inherit;
-  /* width: 9vw; */
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-}
-
-.nav-buttons ul {
-  font-weight: 600;
-  letter-spacing: 2px;
-  font-size: large;
-  list-style: none;
-  display: flex;
-}
-
-.nav-buttons li {
-  margin: 0 10px;
-}
-
-.nav-buttons a {
-  color: #fff;
-  text-decoration: none;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-.footer{
+    width: 100vw;
+    height: 12vh;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    position: fixed;
+    top: 0px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 20px  10px;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 100%;
+    max-height: 12vh;
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .nav-buttons ul {
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: large;
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-buttons li {
+    margin: 0 10px;
+  }
+  
+  .nav-buttons a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 800px) {
+    .menu-toggle {
+      display: block;
+    }
+    
+    .nav-buttons {
+      position: absolute;
+      top: 12vh;
+      left: 0;
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.8);
+      flex-direction: column;
+      align-items: center;
+      display: none;
+    }
+    
+    .nav-buttons.open {
+      display: flex;
+    }
+    
+    .nav-buttons ul {
+      flex-direction: column;
+    }
+  
+    .nav-buttons li {
+      margin: 10px 0;
+    }
+  }
+  
+  .footer {
     background-color: #0F0715;
     width: 100vw;
     height: 12vh;
@@ -65,5 +94,5 @@
     margin-bottom: 2px;
     color: #fff;
     letter-spacing: 1px;
-    margin-top: 3vh;
-}
+  }
+  

@@ -1,13 +1,23 @@
 .project-page{
     width: 100vw;
     /* height: 80vh; */
-    padding: 6vh;
+    padding: 6vh 0 0 0;
     background-color: #050709;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.flex1{
+    display: flex;
+    justify-content: space-evenly;
 }
 .project{
     position: relative;
@@ -20,12 +30,17 @@
     z-index: 0;
 }
 
+@media (max-width: 399px) {
+    .project img {height: 300px;}
+}
+
 .project-title{
     position: absolute;
-    margin: 0.5vh;
+    margin: 0.5vh 0 0 0;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     /* padding: 0px 14px 0px 14px; */
     border-radius: 10px;
     bottom: 5vh;
@@ -42,12 +57,16 @@
 .project-title h3{
     padding: 8px;
     letter-spacing: 1.5px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .project-title h5{
     padding: 0 8px 8px 8px;
     font-weight: 200;
     /* letter-spacing: 1px; */
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .project:hover .project-title {

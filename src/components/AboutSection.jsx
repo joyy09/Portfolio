@@ -14,7 +14,7 @@ const AboutSection = () => {
       <div className="about-container">
         <div className='about-text'>
           <div className='about' style={{color:'#8750f7'}}>Welcome to my world</div>
-          <div className="name">Hi, I'm Aditi Bajaj</div>
+          <div className="name">I'm Aditi Bajaj</div>
           <TypeAnimation className='work' sequence={[
             'a Web Developer.', 1000,
             'a Software Engineer.', 1000

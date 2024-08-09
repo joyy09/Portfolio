@@ -7,6 +7,7 @@ import SkillsSection from './components/SkillsSection';
 import ProjectSection from './components/ProjectSection';
 import Header from './components/Header'; 
 import EducationSection from './components/EducationSection';
+import { TypeAnimation } from 'react-type-animation';
 import './App.css';
 
 function App() {
@@ -17,40 +18,43 @@ function App() {
     // Set a timeout to remove the loading screen and show content
     const timer = setTimeout(() => {
       setLoading(false);
-      setContentVisible(true); // Show main content
+      setContentVisible(true); // Trigger content visibility
     }, 5000); // 5000ms = 5 seconds
 
     // Clean up the timer in case the component unmounts before 5 seconds
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) {
-    return (
-        <>
-      <div className="loading-screen">
-        <h2 className="letter-animation">
-          {
-            'LOADING'.split('').map((letter, index) => (
-              <span key={index} style={{ animationDelay: `${index * 0.1}s` }}>{letter}</span>
-            ))
-          }
-        </h2>
-      </div>
-      <div className={`main-content`} style={{opacity: '0'}}></div>
-    </>
-    );
-  }
-
   return (
-    <div className={`main-content`} style={{opacity: '1'}}>
-      <Header />
-      <Element name='about'> <AboutSection /></Element>
-      <Element name='workex'> <EducationSection /></Element>
-      <Element name='project'> <ProjectSection /></Element>
-      <Element name='skill'> <SkillsSection /></Element>
-      <Footer />
-    </div>
+    <>
+      {loading ? (
+        <TypeAnimation
+          className='loading-screen'
+          sequence={[
+            'hello', 150,
+            'नमस्ते', 150,
+            'வணக்கம்', 150,
+            'હેલો', 150,
+            'bonjour', 150
+          ]}
+          wrapper="h1"
+          speed={{type: 'keyStrokeDelayInMs', value: 121}}
+          cursor={false}
+          omitDeletionAnimation='false'
+        />
+      ) : (
+        <div className={`main-content ${contentVisible ? 'fade-in' : ''}`}>
+          <Header />
+          <Element name='about'><AboutSection /></Element>
+          <Element name='workex'><EducationSection /></Element>
+          <Element name='project'><ProjectSection /></Element>
+          <Element name='skill'><SkillsSection /></Element>
+          <Footer />
+        </div>
+      )}
+    </>
   );
 }
 
 export default App;
+
