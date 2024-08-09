@@ -45,7 +45,7 @@
 
 .pic img{
   object-fit: cover;
-  width: 270px;
+  width: 300px;
   height: 400px;
   margin-top: 10vh;
   transform: rotate(5deg);
@@ -53,6 +53,15 @@
   border-radius: 10px;
   transition: transform 0.4s ease;
 }
+
+@media (max-width: 400px) {
+    .project img {
+        width: 270px;
+        height: 400px;
+    }
+    .about-text{width: 80vw;}
+}
+
 .pic img:hover{
   transform: rotate(0deg);
   border: 2px solid #8750f7;

@@ -43,7 +43,7 @@ function App() {
           omitDeletionAnimation='false'
         />
       ) : (
-        <div className={`main-content ${contentVisible ? 'fade-in' : ''}`}>
+        <div className='main-content'>
           <Header />
           <Element name='about'><AboutSection /></Element>
           <Element name='workex'><EducationSection /></Element>
