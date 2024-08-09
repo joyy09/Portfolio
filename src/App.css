@@ -1,0 +1,31 @@
+.loading-screen {
+    width: 100vw;
+    background-color: #050709;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 20px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.letter-animation span {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 2s infinite;
+}
+
+.main-content {
+    opacity: 0;
+    transition: opacity 10s ease-in-out;
+}

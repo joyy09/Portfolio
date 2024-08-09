@@ -1,0 +1,20 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  font-family: "Sora", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2A1454;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8750f7;
+}

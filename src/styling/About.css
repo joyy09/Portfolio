@@ -1,0 +1,120 @@
+.about-background{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  background-color: #0F0715;
+  color: #140C1C;
+  background-image: linear-gradient(to top right,#050709,#0F0715,#2A1454);
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 300px;
+  font-weight: bolder;
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-shadow: 0px 0px 10px #8750f7;
+  text-shadow: -3px 3px 0 #8750f7,3px 3px 0 #8750f7,3px -3px 0 #8750f7,-3px -3px 0 #8750f7;
+  animation: mymove 8s infinite;
+}
+
+.hi{
+  z-index: -1;
+  opacity: 0.2;
+}
+
+@keyframes mymove {
+  50% {font-size: 250px;}
+}
+.about-container{
+  width: 100vw;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 7vh 0 6vh 0;
+}
+
+.about-text{
+  width: 55vw;
+  padding-top: 10vh;
+}
+
+.pic img{
+  object-fit: cover;
+  width: 25vw;
+  height: 72vh;
+  margin-top: 10vh;
+  transform: rotate(5deg);
+  border: 2px solid #2A1454;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+.pic img:hover{
+  transform: rotate(0deg);
+  border: 2px solid #8750f7;
+}
+.name{
+  font-size: 50px;
+  color: #DDDDDD;
+  padding-bottom: 2vh;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+.about{
+  font-size: 15px;
+  color: #dddddd9c;
+  font-family: "Sora", sans-serif;
+  letter-spacing: 2px;
+  line-height: 21px;
+  padding-bottom: 5px;
+}
+.work{
+  font-size: 62px;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  background: linear-gradient(to right,#8750F7,#DDDDDD);
+  -webkit-background-clip: text;
+  color: transparent;
+  padding-bottom: 2vh;
+}
+
+.social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #8750F7;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.social-container:hover {
+  background-color: #8750F7;
+}
+
+.social {
+  width: 20px;
+  height: 20px;
+  transition: fill 0.3s ease;
+}
+
+.social-container:hover .social {
+  fill: white;
+}
+
+.div-social{
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding-top: 10px;
+  font-size: 15px;
+  color: #dddddd;
+  font-family: "Sora", sans-serif;
+  letter-spacing: 1px;
+  line-height: 21px;
+  font-size: small;
+}
